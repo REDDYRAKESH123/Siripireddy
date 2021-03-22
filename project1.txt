@@ -1,0 +1,226 @@
+
+admin@aitslaba39 MINGW64 ~/Desktop/project
+$ git init
+Initialized empty Git repository in C:/Users/admin/Desktop/project/.git/
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ touch project1.txt
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ touch sample.text
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ touch 1.text 2.c 3.txt
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ ls -l
+total 0
+-rw-r--r-- 1 admin 197121 0 Mar 22 15:50 1.text
+-rw-r--r-- 1 admin 197121 0 Mar 22 15:50 2.c
+-rw-r--r-- 1 admin 197121 0 Mar 22 15:50 3.txt
+-rw-r--r-- 1 admin 197121 0 Mar 22 15:47 project1.txt
+-rw-r--r-- 1 admin 197121 0 Mar 22 15:49 sample.text
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ ls -a
+./  ../  .git/  1.text  2.c  3.txt  project1.txt  sample.text
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ ls
+1.text  2.c  3.txt  project1.txt  sample.text
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ ls -m
+1.text, 2.c, 3.txt, project1.txt, sample.text
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ ls -b
+1.text  2.c  3.txt  project1.txt  sample.text
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        1.text
+        2.c
+        3.txt
+        project1.txt
+        sample.text
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git add.2.c
+git: 'add.2.c' is not a git command. See 'git --help'.
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git add 2.c
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   2.c
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        1.text
+        3.txt
+        project1.txt
+        sample.text
+
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git commit -m "hi"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'admin@aitslaba39.(none)')
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git add .
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1.text
+        new file:   2.c
+        new file:   3.txt
+        new file:   project1.txt
+        new file:   sample.text
+
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git commit -m "project 38"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'admin@aitslaba39.(none)')
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git config user.name "Rakesh.s"
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git config user.name
+Rakesh.s
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git config user.email "reddyrakesh510@gmail.com"
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git config user.email
+reddyrakesh510@gmail.com
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git commit -m "hi"
+[master (root-commit) 89aa5bf] hi
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.text
+ create mode 100644 2.c
+ create mode 100644 3.txt
+ create mode 100644 project1.txt
+ create mode 100644 sample.text
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git remote add Rakesh "https://github.com/REDDYRAKESH123/Siripireddy.git"
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git remote
+Rakesh
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git push Rakesh master
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/REDDYRAKESH123/Siripireddy.git/'
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git push Rakesh master
+To https://github.com/REDDYRAKESH123/Siripireddy.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/REDDYRAKESH123/Siripireddy.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git push Rakesh master
+
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/libexec/git-core/git-gui--askpass'
+Username for 'https://github.com':
+REDDYRAKESH510
+
+
+remote: No anonymous write access.
+fatal: Authentication failed for 'https://github.com/REDDYRAKESH123/Siripireddy.git/'
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ REDDYRAKESH510
+bash: REDDYRAKESH510: command not found
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$ git push -f Rakesh master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 239 bytes | 239.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/REDDYRAKESH123/Siripireddy.git
+ + d14e42b...89aa5bf master -> master (forced update)
+
+admin@aitslaba39 MINGW64 ~/Desktop/project (master)
+$
